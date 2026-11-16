@@ -17,6 +17,7 @@
 /storage/*.key
 
 # --- 2. Backend Configurations, Database & Server Tooling ---
+/.github/
 /config/
 /database/
 /tests/
