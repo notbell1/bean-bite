@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgEspresso" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#2E1605"/>
+      <stop offset="50%" stopColor="#190C03"/>
+      <stop offset="100%" stopColor="#0B0502"/>
+    </linearGradient>
+
+    <linearGradient id="goldCrema" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FEF3C7"/>
+      <stop offset="25%" stopColor="#FBBF24"/>
+      <stop offset="60%" stopColor="#D97706"/>
+      <stop offset="100%" stopColor="#92400E"/>
+    </linearGradient>
+
+    <linearGradient id="cremaFilling" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFBEB"/>
+      <stop offset="40%" stopColor="#FDE68A"/>
+      <stop offset="100%" stopColor="#F59E0B"/>
+    </linearGradient>
+
+    <linearGradient id="matchaLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#86EFAC"/>
+      <stop offset="45%" stopColor="#22C55E"/>
+      <stop offset="100%" stopColor="#15803D"/>
+    </linearGradient>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#F59E0B" floodOpacity="0.45"/>
+    </filter>
+    <filter id="deepShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="#000000" floodOpacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Emblem Frame -->
+  <rect x="12" y="12" width="176" height="176" rx="46" fill="url(#bgEspresso)" stroke="url(#goldCrema)" stroke-width="3" filter="url(#deepShadow)"/>
+  <rect x="18" y="18" width="164" height="164" rx="40" fill="none" stroke="#F59E0B" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.4"/>
+
+  <!-- Coffee Aroma Steam Rising Elegantly -->
+  <g opacity="0.85">
+    <path d="M 88 48 C 82 40, 93 32, 87 24 C 84 19, 88 15, 91 13" fill="none" stroke="url(#goldCrema)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 104 50 C 99 41, 110 33, 105 25 C 102 20, 107 16, 110 14" fill="none" stroke="url(#goldCrema)" stroke-width="2.8" stroke-linecap="round" opacity="0.95"/>
+  </g>
+
+  <!-- The Coffee Bean with Scalloped Pastry Bite -->
+  <g filter="url(#goldGlow)" transform="translate(0, 4)">
+    <!-- Left Wing of Coffee Bean (Sculpted Bean Silhouette) -->
+    <path d="M 68 56
+             C 42 66, 34 96, 44 122
+             C 52 142, 78 153, 94 150
+             C 98 149, 100 142, 97 135
+             C 92 118, 82 100, 78 82
+             C 75 70, 76 61, 68 56 Z"
+          fill="url(#goldCrema)"/>
+
+    <!-- Right Wing of Coffee Bean with the Distinctive "BITE" (3 Crisp Teeth Arcs) -->
+    <path d="M 104 56
+             C 112 56, 120 62, 124 67
+             /* Bite Impression 1 */
+             C 117 71, 115 78, 122 83
+             /* Bite Impression 2 */
+             C 114 87, 112 95, 120 100
+             /* Bite Impression 3 */
+             C 113 104, 112 113, 119 118
+             C 128 127, 124 140, 113 147
+             C 107 150, 103 148, 101 142
+             C 97 127, 93 107, 93 88
+             C 93 70, 98 59, 104 56 Z"
+          fill="url(#goldCrema)"/>
+
+    <!-- The Exposed Bite Interior: Golden Crema & Warm Bakery Core -->
+    <path d="M 124 67
+             C 117 71, 115 78, 122 83
+             C 114 87, 112 95, 120 100
+             C 113 104, 112 113, 119 118
+             C 123 113, 126 105, 127 98
+             C 129 88, 131 77, 124 67 Z"
+          fill="url(#cremaFilling)"
+          stroke="#FEF3C7"
+          stroke-width="1.5"/>
+
+    <!-- Playful Fresh Crumbs flying from the bite mark (Bean & Bite Signature) -->
+    <circle cx="138" cy="74" r="3.2" fill="#FDE68A"/>
+    <circle cx="145" cy="89" r="3.8" fill="#F59E0B"/>
+    <circle cx="139" cy="106" r="2.8" fill="#D97706"/>
+    <circle cx="150" cy="103" r="2" fill="#FEF3C7"/>
+    <circle cx="146" cy="120" r="1.5" fill="#FDE68A"/>
+
+    <!-- Central S-Curve Bean Groove (Elegantly Forming Monera 'M' & Aroma Flow) -->
+    <path d="M 88 64
+             C 84 80, 97 92, 91 112
+             C 87 127, 80 137, 87 146"
+          fill="none"
+          stroke="#FFFBEB"
+          stroke-width="3.6"
+          stroke-linecap="round"/>
+
+    <!-- Organic Matcha Leaf Accent (Fresh Green Touch at Top) -->
+    <g transform="translate(88, 38)">
+      <path d="M 0 14
+               C 8 3, 24 3, 30 11
+               C 30 19, 19 28, 8 25
+               C 0 23, -3 19, 0 14 Z"
+            fill="url(#matchaLeaf)"
+            stroke="#15803D"
+            stroke-width="1"/>
+      <path d="M 3 16 C 11 15, 19 15, 24 14" fill="none" stroke="#DCFCE7" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+    </g>
+
+    <!-- Star Sparkle on Golden Crema Crest -->
+    <polygon points="60,52 63,45 66,52 73,55 66,58 63,65 60,58 53,55" fill="#FFFBEB" opacity="0.95"/>
+  </g>
+</svg>

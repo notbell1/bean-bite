@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../js/**/*.{ts,tsx,js,jsx}';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* ==========================================================================
+       Bean & Bite Color Palette (Soft Warm Surface + Sharp Deep Espresso & Crema)
+       ========================================================================== */
+    /* Espresso / Dark Roast (Tajam, High-Contrast & Wibawa) */
+    --color-coffee-50: #FBF9F5;   /* Canvas / App Background Soft */
+    --color-coffee-100: #F5EFEB;  /* Card Secondary / Subtle Hover */
+    --color-coffee-200: #EADBC8;  /* Border Soft / Dividers */
+    --color-coffee-300: #DAC0A3;  /* Accent Muted */
+    --color-coffee-400: #C49A6C;  /* Warm Biscuit */
+    --color-coffee-500: #A8763E;  /* Roasted Caramel */
+    --color-coffee-600: #8C5828;  /* Medium Roast */
+    --color-coffee-700: #6F3E17;  /* Deep Roast Accent */
+    --color-coffee-800: #4B270C;  /* Espresso Tone */
+    --color-coffee-900: #291506;  /* Primary Brand Dark (Tajam) */
+    --color-coffee-950: #190C03;  /* Extreme Contrast Text */
+
+    /* Crema / Caramel Amber (Energetic Warm Highlight) */
+    --color-crema-50: #FFFBEB;
+    --color-crema-100: #FEF3C7;
+    --color-crema-200: #FDE68A;
+    --color-crema-300: #FCD34D;
+    --color-crema-400: #FBBF24;
+    --color-crema-500: #F59E0B;
+    --color-crema-600: #D97706;
+    --color-crema-700: #B45309;
+
+    /* Matcha Green (Positive, SLA On-time, Stock Safe, Paid) */
+    --color-matcha-50: #F0FDF4;
+    --color-matcha-100: #DCFCE7;
+    --color-matcha-500: #22C55E;
+    --color-matcha-600: #16A34A;
+    --color-matcha-700: #15803D;
+
+    /* Terracotta / Berry (Void, Danger, Overdue, Cancelled, Sold-out) */
+    --color-berry-50: #FEF2F2;
+    --color-berry-100: #FEE2E2;
+    --color-berry-500: #EF4444;
+    --color-berry-600: #DC2626;
+    --color-berry-700: #B91C1C;
+}
+
+/* Base Body Styles */
+body {
+    font-family: var(--font-sans);
+    background-color: #FBF9F5;
+    color: #190C03;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar Tematik Bean & Bite */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #F5EFEB;
+}
+::-webkit-scrollbar-thumb {
+    background: #DAC0A3;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A8763E;
+}
+
+/* Custom SweetAlert2 Container Styles */
+div.swal2-container {
+    font-family: var(--font-sans) !important;
+    z-index: 99999 !important;
+}
+div.swal2-popup.beanbite-swal-popup {
+    background: #FBF9F5 !important;
+    border: 1px solid #EADBC8 !important;
+    border-radius: 1.25rem !important;
+    padding: 1.75rem !important;
+    box-shadow: 0 20px 25px -5px rgba(41, 21, 6, 0.15), 0 8px 10px -6px rgba(41, 21, 6, 0.1) !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-title {
+    color: #291506 !important;
+    font-weight: 700 !important;
+    font-size: 1.35rem !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-html-container {
+    color: #6F3E17 !important;
+    font-size: 0.95rem !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-actions {
+    gap: 0.75rem !important;
+    margin-top: 1.5rem !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-confirm.beanbite-swal-confirm {
+    background-color: #291506 !important;
+    color: #FFFFFF !important;
+    border-radius: 0.75rem !important;
+    font-weight: 600 !important;
+    padding: 0.65rem 1.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(41, 21, 6, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-confirm.beanbite-swal-confirm:hover {
+    background-color: #4B270C !important;
+    transform: translateY(-1px) !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-cancel.beanbite-swal-cancel {
+    background-color: #F5EFEB !important;
+    color: #6F3E17 !important;
+    border: 1px solid #EADBC8 !important;
+    border-radius: 0.75rem !important;
+    font-weight: 600 !important;
+    padding: 0.65rem 1.5rem !important;
+    transition: all 0.2s ease !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-cancel.beanbite-swal-cancel:hover {
+    background-color: #EADBC8 !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-close.beanbite-swal-close-btn {
+    color: #6F3E17 !important;
+    font-size: 1.5rem !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    border-radius: 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+}
+div.swal2-popup.beanbite-swal-popup .swal2-close.beanbite-swal-close-btn:hover {
+    color: #291506 !important;
+    background-color: #EADBC8 !important;
+}
+
+/* ==========================================================================
+   Table Styles: Zebra Striping with Distinct Vertical Column Borders
+   ========================================================================== */
+.table-zebra {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.table-zebra thead th {
+    background-color: #F5EFEB;
+    color: #4B270C;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid #DAC0A3;
+    border-right: 1px solid #DAC0A3;
+    padding: 0.65rem 0.85rem;
+    white-space: nowrap;
+}
+.table-zebra thead th:last-child {
+    border-right: none;
+}
+.table-zebra tbody tr {
+    transition: background-color 0.15s ease;
+}
+.table-zebra tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+.table-zebra tbody tr:nth-child(even) {
+    background-color: #FAF7F4;
+}
+.table-zebra tbody tr:hover {
+    background-color: #FEF3C7; /* Crema warm highlight on hover */
+}
+.table-zebra tbody td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid #EADBC8;
+    border-right: 1px solid #EADBC8;
+    vertical-align: middle;
+}
+.table-zebra tbody td:last-child {
+    border-right: none;
+}
+.table-zebra tbody tr:last-child td {
+    border-bottom: none;
+}

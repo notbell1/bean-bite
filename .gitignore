@@ -1,0 +1,102 @@
+# ==============================================================================
+# Bean & Bite / Monera Coffee — Strict Security & Anti-Leak .gitignore
+# ==============================================================================
+
+# --- 1. Environment Variables, Keys & Secrets ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+/auth.json
+/.npmrc
+/storage/*.key
+
+# --- 2. Backend Configurations, Database & Server Tooling ---
+/config/
+/database/
+/tests/
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+/phpunit.xml
+/phpstan.neon
+/pint.json
+/Homestead.json
+/Homestead.yaml
+.phpactor.json
+
+# --- 3. Documentation, Diagrams & Reports (Anti Copy-Paste) ---
+/docs/
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.xlsx
+PRD_*.md
+Rencana_*.md
+Presentasi_*.md
+
+# --- 4. AI Agents, Prompts, Skills & MCP Configs ---
+/.agents/
+/.agent/
+/.gemini/
+/.amp/
+/.claude/
+/.codex/
+/.cursor/
+/.factory/
+/.grok/
+/.junie/
+/.kiro/
+/.pi/
+/.mcp.json
+/AGENTS.md
+/CLAUDE.md
+/boost.json
+/opencode.json
+/opencode.jsonc
+
+# --- 5. Dependencies, Build Artifacts & Generated Files ---
+/node_modules/
+/vendor/
+/bootstrap/ssr/
+/public/build/
+/public/fonts-manifest.dev.json
+/public/hot
+/public/storage
+/resources/js/actions/
+/resources/js/routes/
+/resources/js/wayfinder/
+
+# --- 6. Storage, Logs, Caches & Database Dumps ---
+/storage/pail/
+/storage/logs/*.log
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/.phpunit.cache/
+.phpunit.result.cache
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# --- 7. IDE, Editors & OS Junk ---
+/.vscode/
+/.idea/
+/.fleet/
+/.nova/
+/.zed/
+.DS_Store
+Thumbs.db
+desktop.ini
